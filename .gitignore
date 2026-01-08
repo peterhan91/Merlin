@@ -4,3 +4,6 @@
 **/*.egg-info/
 **/checkpoints/
 dist/*
+.DS_Store
+.vscode/
+merlin.txt

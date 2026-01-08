@@ -72,6 +72,18 @@ The `phenotypes.csv` file is structured with two columns:
 
 - `phecode_str`: The string description of the phenotype.
 
+If you need to expand ICD codes into Phecodes and roll up to less-specific phenotypes (per PheWAS hierarchy), you can do:
+
+```python
+from merlin.utils import map_icd_codes_to_phenotype_labels
+
+labels = map_icd_codes_to_phenotype_labels(
+    ["I10", "250.00"],
+    expand=True,
+    phenotypes_path="documentation/phenotypes.csv",
+)
+```
+
 ______________________________________________________________________
 
 ### Five-year Disease Prediction
